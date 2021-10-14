@@ -1,0 +1,2 @@
+C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConAnidados\obj\Debug\EjeConAnidados.csproj.AssemblyReference.cache
+C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConAnidados\obj\Debug\EjeConAnidados.csproj.CoreCompileInputs.cache
