@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 body {
-    background: linear-gradient(#87d8ec ,#15667a );
+    background: linear-gradient(#fcdfac, #11677c);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #08313b;
@@ -10,11 +10,13 @@ body {
 main {
     border-radius: 6px;
     padding: 20px;
+    margin: 0 auto;
+    width: 80%;
 }
 main header h1 {
-    background-color: #5db3c8;
+    background-color: #08313b;
     border-radius: 6px;
-    color: #08313b;
+    color: #fcdfac;
     padding: 20px;
     position: relative;
     margin-top: 0;
@@ -29,4 +31,10 @@ main header h1 a:visited {
 }
 main header h1 a:hover {
     transform: translateX(-6px);
+}
+main section h2 {
+    border-bottom: 4px dotted #08313b;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    text-align: center;
 }
