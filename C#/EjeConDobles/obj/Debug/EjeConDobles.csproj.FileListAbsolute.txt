@@ -1,2 +1,0 @@
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConDobles\obj\Debug\EjeConDobles.csproj.AssemblyReference.cache
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConDobles\obj\Debug\EjeConDobles.csproj.CoreCompileInputs.cache

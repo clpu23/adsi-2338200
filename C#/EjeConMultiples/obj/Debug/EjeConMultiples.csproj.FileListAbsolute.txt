@@ -1,7 +1,0 @@
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConMultiples\bin\Debug\EjeConMultiples.exe.config
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConMultiples\bin\Debug\EjeConMultiples.exe
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConMultiples\bin\Debug\EjeConMultiples.pdb
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConMultiples\obj\Debug\EjeConMultiples.csproj.AssemblyReference.cache
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConMultiples\obj\Debug\EjeConMultiples.csproj.CoreCompileInputs.cache
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConMultiples\obj\Debug\EjeConMultiples.exe
-C:\Users\lopez\Desktop\ADSI\TRIMESTE 1\sistemas julian\repos\EjeConMultiples\obj\Debug\EjeConMultiples.pdb
