@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        small{
+            color: #aa0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                  </svg>
+            </a>
+            <h1>Example</h1>
+        </header>
+        <section>
+            <h3>type string: <small id="ts"></small> </h3>
+            <h3>type number: <small id="tn"></small> </h3>
+            <h3>type boolean: <small id="tb"></small> </h3>
+            <h3>type null/undefined: <small id="tu"></small> </h3>
+            <h3>type array: <small id="ta"></small> </h3>
+            <h3>type object: <small id="to"></small> </h3>
+        </section>
+    </main>
+    <script>
+        //ids
+        var ts =document.getElementById('ts')
+        var tn =document.getElementById('tn')
+        var tb =document.getElementById('tb')
+        var tu =document.getElementById('tu')
+        var ta =document.getElementById('ta')
+        var to =document.getElementById('to')
+        //type string
+        const string1 = 'hello'
+        const string2 = 'world'
+        const stringr = string1 + ' ' + string2
+        ts.innerText = stringr
+        //type number 
+        const number1 = 45.98
+        const number2 = '23'
+        const numberr =  (number1 + parseInt (number2)). toPrecision(4)
+        tn.innerText = numberr 
+
+    </script>
+</body>
+</html>
