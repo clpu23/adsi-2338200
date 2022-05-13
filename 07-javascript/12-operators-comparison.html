@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assigment</title>
+    <title>Comparison</title>
     <link rel="stylesheet" href="css/menu.css">
     <style>
 
@@ -29,9 +29,9 @@
         }
 
         table thead input {
+            outline: none;
             border: none;
             border-radius: 20px;
-            outline: none;
             padding: 8px;
             width: 120px;
         }
@@ -56,56 +56,68 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
                   </svg>
             </a>
-            <h1>Assigment</h1>
+            <h1>Comparison</h1>
         </header>
         <section>
             <table class="operators">
                 <thead>
                     <tr>
-                        <th colspan="5"><input type="number" placeholder="Y Value"></th>
+                        <th colspan="5"><input type="number" placeholder="X Value"></th>
                     </tr>
                     <tr>
                         <th>Operator</th>
-                        <th>Example</th>
-                        <th>Equal</th>
+                        <th>Description</th>
+                        <th>Comparison</th>
                         <th>Result</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>=</td>
-                        <td>x=y</td>
-                        <td class="eq"></td>
+                        <td>==</td>
+                        <td>Is Equal</td>
+                        <td> x==8</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td>+=</td>
-                        <td>x+=y</td>
-                        <td class="eq">x=x+y</td>
+                        <td>===</td>
+                        <td>Is Equal (Value & Type)</td>
+                        <td> x===5</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td>-=</td>
-                        <td>x-=y</td>
-                        <td class="eq">x=x-y</td>
+                        <td>!=</td>
+                        <td>Different</td>
+                        <td> x!=8</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td>*=</td>
-                        <td>x*=y</td>
-                        <td class="eq">x=x*y</td>
+                        <td>!==</td>
+                        <td>Different (Value & Type)</td>
+                        <td> x!==5</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td>/=</td>
-                        <td>x/=y</td>
-                        <td class="eq">x=x/y</td>
+                        <td>></td>
+                        <td>Greater Than</td>
+                        <td>x>8</td>
                         <td class="rs"></td>
                     </tr>
                     <tr>
-                        <td>%=</td>
-                        <td>x%=y</td>
-                        <td class="eq">x=x%y</td>
+                        <td><</td>
+                        <td>Less Than</td>
+                        <td>x<8</td>
+                        <td class="rs"></td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>Greater Than or Equal</td>
+                        <td>x>=8</td>
+                        <td class="rs"></td>
+                    </tr>
+                    <tr>
+                        <td><</td>
+                        <td>Less Than or Equal</td>
+                        <td>x<=8</td>
                         <td class="rs"></td>
                     </tr>
                 </tbody>
@@ -114,31 +126,37 @@
     </main>
     <script>
         //results
-        const eqs    = document.querySelectorAll('td.eq')
         const rss    = document.querySelectorAll('td.rs')
         const input = document.querySelector('input')
         //events
         input.oninput = () => {
             if (input.value != ''){
                 if(input.value.length < 4) {
-                    // =
-                    eqs[0].innerText = 'x=' + input.value
-                    rss[0].innerText = parseInt(input.value) 
+                    // ==
+                    rss[0].innerText = ( parseInt(input.value) == 8 )
 
-                    // +=
-                    rss[1].innerText = 10 + parseInt(input.value) 
+                    // ===
+                    rss[1].innerText = ( parseInt(input.value) === 5 )
 
-                    // -=
-                    rss[2].innerText = 10 - parseInt(input.value) 
+                    // !=
+                    rss[2].innerText = ( parseInt(input.value) != 8 )
 
-                    // *=
-                    rss[3].innerText = 10 * parseInt(input.value) 
+                    // !===
+                    rss[3].innerText = ( parseInt(input.value) !== 5 )
 
-                    // /=
-                    rss[4].innerText = 10 / parseInt(input.value) 
+                    // >
+                    rss[4].innerText = ( parseInt(input.value) > 8 )
 
-                    // %=
-                    rss[5].innerText = 10 % parseInt(input.value) 
+                    // <
+                    rss[5].innerText = ( parseInt(input.value) < 8 )
+
+                    // >=
+                    rss[6].innerText = ( parseInt(input.value) >= 8 )
+
+                    // <=
+                    rss[7].innerText = ( parseInt(input.value) <= 8 )
+
+                  
 
                    
                 } else {
@@ -146,9 +164,7 @@
                 }
 
             } else {
-                eqs[0].innerText = ''
                 for (let i = 0; i < rss.length; i++) {
-                    
                     rss[i].innerText = ''
                 }
             } 
