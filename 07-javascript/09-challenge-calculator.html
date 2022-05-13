@@ -192,6 +192,7 @@
         //all numbers & operators
         const btnsNumbers =document.querySelectorAll('button[data-num]')
         const btnsOperators =document.querySelectorAll('button[data-opr]')
+        
 
         // logic value 
         var operStatus = false 
@@ -226,69 +227,97 @@
             //alert(evt.keyCode)
             // 0 - 9 => keyCodes: 96,97,98,99,100,101,102,103,104,105
             switch (evt.keyCode) {
+            //Operators
+            case 8: 
+                    deleteLastValue()
+                    break;
+                case 46: 
+                claerDisplay()
+                    break;
                 case 96:
                 case 48:
                     addToDisplay(0)
-                    
                     break;
-
                 case 97:
                 case 49:
                     addToDisplay(1)
-                  
                     break;
-
                 case 98:
-                case 50:    
+                case 50:
                     addToDisplay(2)
-                
-                  
                     break;
-                
                 case 99:
-                case 51:    
+                case 51:
                     addToDisplay(3)
-                  
                     break;
-             
                 case 100:
                 case 52:
                     addToDisplay(4)
-                  
                     break;
-                
                 case 101:
-                case 53:    
+                case 53:
+                    if (evt.shiftKey) {
+                        addToDisplay('%')
+                    }else{
                     addToDisplay(5)
-                  
+                    }
                     break;
-                
                 case 102:
                 case 54:
                     addToDisplay(6)
-                  
                     break;
-
                 case 103:
-                case 55:    
+                case 55:
+                    if(evt.shiftKey){
+                        addToDisplay('/')
+                    }else{
                     addToDisplay(7)
-                  
+                    }
                     break;
-
+                case 111: 
+                    addToDisplay('/')
+                    break;
                 case 104:
-                case 56:    
+                case 56:
                     addToDisplay(8)
-
                     break;
-
                 case 105:
-                case 57:    
+                case 57:
                     addToDisplay(9)
-                  
                     break;
-                  
-            
+                case 106:
+                    addToDisplay('*')
+                    break;
+                case 67:
+                     claerDisplay()
+                break;
+                case 187: 
+                case 107:
+                    if(evt.shiftKey){
+                        addToDisplay('*')
+                    } else{
+                        addToDisplay('+')
+                    }
+                    break;
+                case 190:
+                    addToDisplay('.')
+                    break;
+                case 110:
+                    addToDisplay('.')
+                break;
                 default:
+                    break;
+                case 222:
+                    if (evt.ctrlKey && evt.altKey) {
+                        addToDisplay('^')
+                    }
+                    break;
+                case 189: 
+                case 109:
+                    addToDisplay('-')
+                    break;
+                case 13:
+                btnEqual.onclick()
                     break;
             }
         }
@@ -307,6 +336,13 @@
             } else{
                 operStatus = true
             }
+        }
+        btnEqual.onclick = () => {
+            var operacion  = display.value;
+            if(operacion.trim() != "")
+            operacion = operacion.replace("^", "**");
+            operacion = eval(operacion)
+            display.value = operacion
         }
 
         //funtions
