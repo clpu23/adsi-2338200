@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Functions</title>
+    <title>functions</title>
     <link rel="stylesheet" href="css/menu.css">
-    
+    <style>
+        h4 {
+            color: #aa0;
+            font-size: 1.4rem;
+            margin-top: 10px;
+        }
+        strong {color: #aa0;}
+        div.form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -16,12 +30,56 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
                   </svg>
             </a>
-            <h1>Functions</h1>
+            <h1>functions</h1>
         </header>
         <section>
-
+            <h3> without params/args</h3>
+            <h4 id="greeting"></h4>
+            <h3> with params/args</h3>
+            <div class="form">
+                <input type="number" id="num1" min="1" max="99999" placeholder="Number 1">
+                <strong>+</strong>
+                <input type="number" id="num2" min="1" max="99999" placeholder="Number 2">
+                <strong>=</strong>
+                <strong id="result"></strong>
+            </div>
+            
+            <h3>Returns</h3>
+            <h4 id="fulldate"></h4>
         </section>
     </main>
-    
+    <script>
+        //----
+        const greeting = document.getElementById('greeting')
+        const umber1 = document.getElementById('num1')
+        const number2 = document.getElementById('num2')
+        const result = document.getElementById('results')
+        const fuuldate = document.getElementById('fulldate')
+         
+        //function without parameters/arguments
+        function showGreeting() {
+            greeting.innerText = "Welcome: Guest! 🐒"
+        }
+        showGreeting() //call the function for ejecut
+        //functions with parameters/arguments 
+        function sumValues(n1 , n2) {
+            if (n1 != '' && n2 != '' ){
+                result.innerText = parseInt(n1) + parseInt(n2)
+            }
+        }
+
+        number1.oninput = () => {
+            sumValues (number1.value, number2.value)
+        }
+        number2.oninput = () => {
+            sumValues (number1.value, number2.value)
+        }
+        //function return value
+        let tdate = new Date 
+        function showDate () {
+            return tdate.getHours() + ':' + tdate.getMinutes()
+        }
+        fulldate.innerText = 'Time: ' + showDate()
+    </script>
 </body>
 </html>

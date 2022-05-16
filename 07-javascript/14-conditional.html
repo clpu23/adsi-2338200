@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        input, button{
+            display: block;
+            margin: 10px auto;
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+        }
+        button{
+            width: 220px;
+            cursor: pointer;
+            background-color: #ffdd00;
+            font-family: 'Rowdies', cursive;
+            font-size: 0.9rem;
+            transition: 0.2s ease-in;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+        hr{
+            margin-top: 20px;
+            color: #ffdd00;
+        }
+        h4.alert {
+            margin: 20px;
+            background: 20px;
+            cursor: pointer;
+            background-color: #ffdd00;
+            font-family: 'Rowdies', cursive;
+            transition: 0.2s ease-in;
+            padding: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                  </svg>
+            </a>
+            <h1>Conditional</h1>
+        </header>
+        <section>
+            <h3>How Much Is: 4*5/2?</h3>
+            <input type="number" class="answer">
+            <button>Validate</button>
+            <hr>
+            <h4 class="alert"></h4>
+        </section>
+    </main>
+    <script>
+        const answer = document.querySelector('input')
+        const button = document.querySelector('button')
+        const msj = document.querySelector('h4.alert')
+
+        //Actions
+        button.onclick = () => {
+            let val = answer.value;
+            //Conditional
+            if(val != ''){
+                if(parseInt(val) === 10){   
+                    alert('Congratulations Its Correct!')
+                }else{
+                    alert('Sorry Its Incorrect!')
+                }
+            }else[
+                alert('Please, Enter Answer')
+            ]
+        }
+        //______
+
+        var today = new Date
+        switch (today.getDay()){
+            case 1:
+                msj.innerText = 'Today is Monday 😴'
+                break;
+            case 2:
+                msj.innerText = 'Today is Tuesday 😐'
+                break;
+        
+            case 3:
+                msj.innerText = 'Today is Wednesday 🙂'
+                break;
+     
+            case 4:
+                msj.innerText = 'Today is Thursday 😎'
+                break;
+       
+            case 5:
+                msj.innerText = 'Today is Friday 😀'
+                break;
+            default:
+                msj.innerText = 'today is weekend' 
+                break;
+        }
+    </script>
+</body>
+</html>
