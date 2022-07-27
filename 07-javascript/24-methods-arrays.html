@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        figure.vectors {
+            background: transparent url(images/VECTORS/BG.png) no-repeat center;
+            height: 700px;
+            margin: 0px auto;
+            padding: 0;
+            position: relative;
+            width: 420px;
+            top: 2px;
+        }
+       
+        figure.vectors h2:nth-child(3) {
+            top: 414px;
+        }
+        figure.vectors ul.pokemons {
+            height: 160px;
+            list-style: none;
+            left: 40px;
+            position: absolute;
+            padding: 0;
+            top: 250px;
+            width: 334px;
+        }
+        figure.vectors ul.pokemons li.pk {
+            display: inline-block;
+            height: 76px;
+            filter: grayscale(1);
+            transition: all 0.2s ease-in;
+            width: 78px;
+        }
+        figure.vectors ul.pokemons li.pk:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            filter: grayscale(0);
+        }
+        figure.vectors ul.pokemons li.pk.pk1 {
+            background: transparent url(images/vectors/pk1.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+            margin-top: -40px ;
+            margin-left: -30px;
+            position: absolute;
+        }
+        figure.vectors ul.pokemons li.pk.pk2 {
+            background: transparent url(images/vectors/pk2.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+            margin-top: -40px ;
+            margin-left: 70px;
+            position: absolute;
+        }
+        figure.vectors ul.pokemons li.pk.pk3 {
+            background: transparent url(images/vectors/pk3.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+            margin-top: -40px ;
+            margin-left: 175px;
+            position: absolute;
+        }
+
+        figure.vectors ul.pokemons li.pk.pk4 {
+            background: transparent url(images/vectors/pk4.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+            margin-top: -40px ;
+            margin-left: 280px;
+            position: absolute;
+        }
+        figure.vectors ul.pokemons li.pk.pk5 {
+            background: transparent url(images/vectors/pk5.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+            margin-top: -40px ;
+            margin-left: 175px;
+            position: absolute;
+        }
+        figure.vectors ul.pokemons li.pk.pk6 {
+            background: transparent url(images/vectors/pk6.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+        }
+        figure.vectors ul.pokemons li.pk.pk7 {
+            background: transparent url(images/vectors/pk7.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+        }
+        figure.vectors ul.pokemons li.pk.pk8 {
+            background: transparent url(images/vectors/pk8.png) no-repeat center;
+            height: 92px;
+            width: 92px;
+        }
+        figure.vectors ul.pokemons li.pk.selected {
+            transform: scale(1.2);
+            filter: grayscale(0);
+        }
+        figure.vectors div.switch {
+            border: 3px solid rgb(255, 0, 0);
+            box-sizing: border-box;
+            border-radius: 40px;
+            cursor: pointer;
+            height: 40px;
+            left: 16px;
+            position: absolute;
+            top: 490px;
+            width: 100px;
+        }
+        figure.vectors div.switch span {
+            color: rgb(0, 0, 0);
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        figure.vectors div.switch span.right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        figure.vectors div.switch span.left {
+            position: absolute;
+            top: 10px;
+            left: 6px;
+        }
+        figure.vectors div.switch span.hide {
+            display: none;
+        }
+        figure.vectors div.switch.action {
+            top: 550px;
+        }
+        figure.vectors div.switch div.circle {
+            background: rgb(255, 0, 0);
+            border-radius: 15px;
+            height: 30px;
+            left: 21px;
+            position: absolute;
+            top: 3px;
+            left: 4px;
+            transition: left 0.2s ease-in;
+            width: 30px;
+        }
+        figure.vectors div.switch.checked div.circle {
+            left: 64px;
+        }
+        figure.vectors button {
+            border: none;
+            bottom: 4px;
+            position: absolute;
+            height: 96px;
+            left: 160px;
+            transition: all 0.2s ease-in;
+            width: 96px;
+        }
+        figure.vectors button:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        figure.vectors button#btn-add {
+            background: transparent url(images/vectors/btn-add.png) no-repeat center;
+        }
+        figure.vectors button#btn-remove {
+            background: transparent url(images/vectors/btn-remove.png) no-repeat center;
+        }
+        figure.vectors input {
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 40px;
+            color: #222850;
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 14px;
+            height: 34px;
+            left: 15px;
+            outline: none;
+            position: absolute;
+            text-align: center;
+            top: 608px;
+            width: 97px;
+        }
+        ul.final-vector {
+            list-style: none;
+            margin: 40px auto;
+            padding: 0;
+            position: relative;
+            width: 340px;
+        }
+        ul.final-vector li {
+            border: 1px solid purple;
+            display: inline-block;
+            height: 76px;
+            filter: grayscale(1);
+            transition: all 0.2s ease-in;
+            width: 78px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            
+        </header>
+        <section>
+            <figure class="vectors">
+                
+                <ul class="pokemons">
+                    <li class="pk pk1 animate__animated"></li>
+                    <li class="pk pk2 animate__animated"></li>
+                    <li class="pk pk3 animate__animated"></li>
+                    <li class="pk pk4 animate__animated"></li>
+                    <li class="pk pk5 animate__animated"></li>
+                    <li class="pk pk6 animate__animated"></li>
+                    <li class="pk pk7 animate__animated"></li>
+                    <li class="pk pk8 animate__animated"></li>
+                </ul>
+                
+                <div class="switch position">
+                    <span class="right">Initial</span>
+                    <span class="left hide">Finn</span>
+                    <div class="circle"></div>
+                </div>
+                <div class="switch action">
+                    <span class="right">Add</span>
+                    <span class="left hide">Remove</span>
+                    <div class="circle"></div>
+                </div>
+                <input class="num-position" type="number" min="0" max="99">
+                <button id="btn-add"></button>
+            </figure>
+            <ul class="final-vector">
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // Variables & Constants
+        const pokemons   = document.querySelectorAll('li.pk');
+        const switches   = document.querySelectorAll('div.switch');
+        const txtLeft    = document.querySelectorAll('span.left');
+        const txtRight   = document.querySelectorAll('span.right');
+        const btn        = document.querySelector('button');
+        var   numPos     = document.querySelector('input.num-position');
+        var   showVector = document.querySelector('ul.show-vector');
+        var   pkArray    = [];
+
+        // Object
+        var vector = {
+            // Attributes
+            pkSelected: null,
+            posCheked: 'First',
+            actCheked: 'Add',
+            // Methods
+            clicksSwitches: function() {
+                for (let i = 0; i < switches.length; i++) {
+                    switches[i].onclick = function() {
+                        this.classList.toggle('checked');
+                        txtLeft[i].classList.toggle('hide');
+                        txtRight[i].classList.toggle('hide');
+                        if (i == 0) {
+                            if (txtRight[0].classList.contains('hide')) {
+                                vector.posCheked = 'Last';
+                            } else {
+                                vector.posCheked = 'First';
+                            }
+                        } else {
+                            if (txtRight[1].classList.contains('hide')) {
+                                vector.actCheked = 'Remove';
+                                btn.setAttribute('id', 'btn-remove');
+                            } else {
+                                vector.actCheked = 'Add';
+                                btn.setAttribute('id', 'btn-add');
+                            }
+                        }
+                    };
+                }
+            },
+            clicksPokemons: function() {
+                for (let i = 0; i < pokemons.length; i++) {
+                    pokemons[i].onclick = function() {
+                        vector.removeSelected();
+                        this.classList.add('selected');
+                        this.classList.add('animate__heartBeat');
+                        vector.pkSelected = (i+1);
+                    };
+                }
+            },
+            removeSelected: function() {
+                for (let i = 0; i < pokemons.length; i++) {
+                    pokemons[i].classList.remove('selected');
+                    pokemons[i].classList.remove('animate__heartBeat');
+                }
+            },
+            renderVector: function() {
+                if(this.pkSelected == null) {
+                    alert('Please select a Pokemon!');
+                } else {
+                    // Logic
+                    if(numPos.value.length < 1) {
+                        if (vector.posCheked == 'First') {
+                            if (vector.actCheked == 'Add') {
+                                pkArray.unshift('pk' + vector.pkSelected); // Add First
+                            } else {
+                                pkArray.shift(); // Remove First
+                            }
+                        } else {
+                            if (vector.actCheked == 'Add') {
+                                pkArray.push('pk' + vector.pkSelected); // Add Last
+                            } else {
+                                pkArray.pop(); // Remove Last
+                            }
+                        }s
+                    } else {
+                        if (vector.actCheked == 'Add') {
+                            pkArray.splice(numPos.value, 0, 'pk' + vector.pkSelected); // Add Pos
+                        } else {
+                            pkArray.splice(numPos.value, 1); // Remove Pos
+                        }
+                    }
+                    //  Render Array
+                    showVector.innerHTML = "";
+                    for (let i = 0; i < pkArray.length; i++) {
+                        showVector.innerHTML += "<li class='animate__animated animate__rubberBand "+ pkArray[i] +"'> <i>" + i + "</i></li>"; 
+                    }
+                }
+            }
+        }
+        vector.clicksPokemons();
+        vector.clicksSwitches();
+        // Action
+        btn.onclick = function() {
+            vector.renderVector();
+        }
+    </script>
+</body>
+</html>
