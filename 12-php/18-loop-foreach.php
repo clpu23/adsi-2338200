@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <?="Comments" ?> </title>
+    <title> <?="Hello World" ?> </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        <style>
+		button.btn-custom { 
+			background-color: #721c8a; 
+			color: #fff;
+		}
+		button.btn-custom:hover {
+			color: #fff;
+			background-color: #5a1771; 
+		}
+	</style>
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-info navbar-primary sticky-top">
@@ -20,7 +32,7 @@
           <a class="nav-link" aria-current="page" href="index.php">Main Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">03 Comments</a>
+          <a class="nav-link active" aria-current="page" href="#">01 Hello World</a>
         </li>
       </ul>
     </div>
@@ -29,21 +41,19 @@
     <main class="container">
         <div class="row">
             <div class="col-md-6 offset-3 text-center">
-            <?php echo "<h1 class='mt-5'>Comments</h1>"; ?>
+            <?php echo "<h1 class='mt-5'>Hello World</h1>"; ?>
             <hr>
-            
             <?php 
-				// Defined the classes of button
-				$clases = "btn btn-lg btn-outline-info";
-				/*
-					btn                 = Button
-					btn-lg              = Button Lare
-					btn-block           = Button Block
-					btn-outline-primary = Button borderded blue 
-				*/
-				# Print variable $clases into the class
+					$buttons = array('btn-danger', 'btn-warning', 'btn-success', 'btn-primary', 'btn-info', 'btn-secondary', 'btn-dark', 'btn-light', 'btn-link', 'btn-custom');
 				?>
-				<a href="javascript:;" class="<?=$clases?>"> This is a button </a>         
+				<?php foreach ($buttons as $button): ?>
+                    <div class="mb-2"> 
+					<button class="btn btn-lg btn-block <?php echo $button; ?>">
+						<?php echo $button; ?>
+                    </div>
+					</button>
+				<?php endforeach ?>
+           
             </div>
         </div>
     

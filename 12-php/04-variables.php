@@ -28,29 +28,29 @@
 </nav>
     <main class="container">
         <div class="row">
-            <div class="col-6 offset-3 text-center">
+            <div class="col-md-6 offset-3 text-center">
             <?php echo "<h1 class='mt-5'>Variables</h1>"; ?>
             <hr>
             <?php 
-                    $alert1     = 'alert alert-success alert-dismissible fade show text-start';
-                    $alert2     = 'alert alert-warning alert-dismissible fade show text-start';
-                    $alert3     = 'alert alert-danger  alert-dismissible fade show text-start';
-                    $user1      = 1;
-                    $user2      = 2;
-                    $user3      = 3;
-                ?>
-                <div class="<?php echo $alert1; ?>"> 
-                    <strong>User <?php echo $user1; ?>: The information is correct</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="<?php echo $alert2; ?>"> 
-                    <strong>User <?php echo $user2; ?>: The information is incorrect</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="<?php echo $alert3; ?>"> 
-                    <strong>User <?php echo $user3; ?>: The information is not register</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
+					$alert1     = 'alert alert-success alert-dismissible fade show text-start';
+					$alert2     = 'alert alert-warning alert-dismissible fade show text-start';
+					$alert3     = 'alert alert-danger  alert-dismissible fade show text-start';
+					$user1      = 1;
+					$user2      = 2;
+					$user3      = 3;
+				?>
+				<div class="<?php echo $alert1; ?>"> 
+					<strong>User <?php echo $user1; ?>: The information is correct</strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+				<div class="<?php echo $alert2; ?>">
+					<strong>User <?php echo $user2; ?>: The information is incorrect</strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+				<div class="<?php echo $alert3; ?>"> 
+					<strong>User <?php echo $user3; ?>: The information is not register</strong>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
            
             </div>
         </div>

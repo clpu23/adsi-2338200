@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <?="Comments" ?> </title>
+    <title> <?="Hello World" ?> </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
           <a class="nav-link" aria-current="page" href="index.php">Main Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">03 Comments</a>
+          <a class="nav-link active" aria-current="page" href="#">01 Hello World</a>
         </li>
       </ul>
     </div>
@@ -29,21 +29,20 @@
     <main class="container">
         <div class="row">
             <div class="col-md-6 offset-3 text-center">
-            <?php echo "<h1 class='mt-5'>Comments</h1>"; ?>
+            <?php echo "<h1 class='mt-5'>Hello World</h1>"; ?>
             <hr>
-            
             <?php 
-				// Defined the classes of button
-				$clases = "btn btn-lg btn-outline-info";
-				/*
-					btn                 = Button
-					btn-lg              = Button Lare
-					btn-block           = Button Block
-					btn-outline-primary = Button borderded blue 
-				*/
-				# Print variable $clases into the class
+					function show_name() {
+						echo "Jeremias Springfield";
+					}
 				?>
-				<a href="javascript:;" class="<?=$clases?>"> This is a button </a>         
+				<div class="mt-4 p-5 bg-primary text-white rounded">
+				  <div class="container">
+				    <h1 class="display-5"><?php show_name(); ?></h1>
+				    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+				  </div>
+				</div>
+           
             </div>
         </div>
     

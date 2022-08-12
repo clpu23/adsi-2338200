@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <?="Comments" ?> </title>
+    <title> <?="Hello World" ?> </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
           <a class="nav-link" aria-current="page" href="index.php">Main Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">03 Comments</a>
+          <a class="nav-link active" aria-current="page" href="#">01 Hello World</a>
         </li>
       </ul>
     </div>
@@ -29,21 +29,30 @@
     <main class="container">
         <div class="row">
             <div class="col-md-6 offset-3 text-center">
-            <?php echo "<h1 class='mt-5'>Comments</h1>"; ?>
+            <?php echo "<h1 class='mt-5'>Hello World</h1>"; ?>
             <hr>
-            
-            <?php 
-				// Defined the classes of button
-				$clases = "btn btn-lg btn-outline-info";
-				/*
-					btn                 = Button
-					btn-lg              = Button Lare
-					btn-block           = Button Block
-					btn-outline-primary = Button borderded blue 
-				*/
-				# Print variable $clases into the class
-				?>
-				<a href="javascript:;" class="<?=$clases?>"> This is a button </a>         
+            <form action="" method="post">
+					<div class="mb-3">
+						<label for="name" class="form-label">Full Name:</label>
+						<input type="text" class="form-control" name="name" id="name">
+					</div>
+					<div class="mb-3">
+						<label for="email" class="form-label">Email:</label>
+						<input type="email" class="form-control" name="email" id="email">
+					</div>
+					<div class="mb-3">
+						<input type="submit" class="btn btn-success" value="Send Form">
+						<input type="reset" class="btn btn-light" value="Clear Form">
+					</div>
+				</form>
+				<?php if ($_post): ?>
+					<div class="alert alert-success">
+						<strong>Full Name:</strong> <?php echo $_post['name']; ?>
+						<br>
+						<strong>Email:</strong> <?php echo $_post['email']; ?>
+					</div>
+				<?php endif ?>
+           
             </div>
         </div>
     

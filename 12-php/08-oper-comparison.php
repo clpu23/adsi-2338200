@@ -4,89 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <?="operator comparison" ?> </title>
+    <title> <?="Oper Comparison" ?> </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">PHP & Bootstrap 5</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php">Main Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">08- operator comparison</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg bg-info navbar-primary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.php">PHP & Bootstrap V5</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php">Main Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">08 Oper Comparison</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     <main class="container">
         <div class="row">
-            <div class="col-6 offset-3 text-center">
-            <?php 
-            echo "<h1 class='mt-5'>operator comparison</h1>"; ?>
+            <div class="col-md-6 offset-3 text-center">
+            <?php echo "<h1 class='mt-5'>Oper Comparison</h1>"; ?>
+            <hr>
             <table class="table table-bordered table-striped table-hover table-dark">
 					<thead class="bg-secondary text-uppercase">
 						<tr>
 							<th>Operator</th>
-							<th>Descrition</th>
+							<th>Description</th>
 							<th>Example</th>
-							<th>Resuld</th>
+							<th>Result</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td> == </td>
-							<td> Es Igual </td>
-							<td>5==8;</td>
-							<td><?php echo var_dump(5==8); ?></td>
+							<td> Is Equal </td>
+							<td>5 == 8;</td>
+							<td><?php echo var_dump(5 == 8); ?></td>
 						</tr>
 						<tr>
 							<td> != </td>
-							<td> No es Igual </td>
-							<td>5!=8;</td>
-							<td><?php echo var_dump(5!=8); ?></td>
+							<td> Is Not Equal </td>
+							<td>5 != 8;</td>
+							<td><?php echo var_dump(5 != 8); ?></td>
 						</tr>
 						<tr>
 							<td> <> </td>
-							<td> No es Igual </td>
-							<td>5<>8;</td>
-							<td><?php echo var_dump(5<>8); ?></td>
+							<td> Is Not Equal </td>
+							<td>5 <> 8;</td>
+							<td><?php echo var_dump(5 <> 8); ?></td>
 						</tr>
 						<tr>
 							<td> > </td>
-							<td> Es Mayor que </td>
-							<td>5>8;</td>
-							<td><?php echo var_dump(5>8); ?></td>
+							<td> Great than </td>
+							<td>5 > 8;</td>
+							<td><?php echo var_dump(5 > 8); ?></td>
 						</tr>
 						<tr>
 							<td> < </td>
-							<td> Es Menor que </td>
-							<td>5<8;</td>
-							<td><?php echo var_dump(5<8); ?></td>
+							<td> Less Than </td>
+							<td>5 < 8;</td>
+							<td><?php echo var_dump( 5 < 8); ?></td>
 						</tr>
 						<tr>
 							<td> >= </td>
-							<td> Es Mayor o Igual que </td>
-							<td>5>=8;</td>
-							<td><?php echo var_dump(5>=8); ?></td>
+							<td> Great or Equal Than </td>
+							<td>5 >= 8;</td>
+							<td><?php echo var_dump(5 >= 8); ?></td>
 						</tr>
 						<tr>
 							<td> <= </td>
-							<td> Es Menor o Igual que </td>
-							<td>5<=8;</td>
-							<td><?php echo var_dump(5<=8); ?></td>
+							<td> Less or Equal Than </td>
+							<td>5 <= 8;</td>
+							<td><?php echo var_dump(5 <= 8); ?></td>
 						</tr>
 					</tbody>
 				</table>
-            
-                
+           
             </div>
         </div>
     
