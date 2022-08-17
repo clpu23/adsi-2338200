@@ -40,14 +40,37 @@
             <g class="padre" id="8"><image xlink:href="https://raw.githubusercontent.com/NestorPlasencia/pikachu-puzzle/master/9.png" class="movil"></g>
         </svg>
         <audio id="win" src="https://raw.githubusercontent.com/NestorPlasencia/PikaPuzzle/master/media/win.mp3"></audio>
+        <div class="timeT">
+            <h2 class="time">tiempo:30s</h2>
+        </div>
             
 
         </section>
-    
     <script>
+        let timer = 30
+        let timerInicial = timer
+        let timerRegresivoId = null
+
+        let mostrarTiempo = document.querySelector('.time')
+
+        function contarTiempo (){
+            timerRegresivoId = setInterval(()=>{
+                timer--;
+                mostrarTiempo.innerHTML = `Tiempo: ${timer}S`
+                if (timer == 0) {
+                    clearInterval(timerRegresivoId)
+                    alert('El Tiempo A Finalizado')
+                    window.location.reload()
+                }
+            },1000)
+        }
+        contarTiempo()
+
                 /*Programacion de JavaScript*/
 
         var piezas = document.getElementsByClassName('movil');
+
+
 
         var tamWidh = [134,192,134,163,134,163,134,192,134];
         var tamHeight = [163,134,163,134,192,134,163,134,163];
@@ -76,6 +99,7 @@
         }
 
         function moverElemento(evt){
+ 
             var dx = evt.clientX - currentX;
             var dy = evt.clientY - currentY;
             currentPosx = currentPosx + dx;
@@ -137,6 +161,8 @@
             }
             if(bien_ubicada == 9){
                 win.play();
+                alert('Has Ganado')
+                window.location.reload()
             }
         }
 
