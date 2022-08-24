@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+<body>
+    <main>
+        <header class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card text-center my-5">
+                      <div class="card-body">
+                        <nav class="breadcrumb">
+                            <a class="breadcrumb-item" href="index.html">Main Menu</a>
+                            <span class="breadcrumb-item active" aria-current="page">Template</span>
+                        </nav>
+                        <hr>
+                        <section class="card-text d-flex justify-content-center align-items-center">
+                            <button class="btn btn-danger btn-remove">-</button>
+                            <h2 class="display-1 mx-3">0</h2>
+                            <button class="btn btn-success btn-add">+</button>
+
+                        </section>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <nav>
+            </nav>
+        </section>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $count = 0
+            $('.btn-add').click(function(e){
+                $('h2').text(++$count)
+            })
+            $('.btn-add').dbclick(function(e){
+                $('h2').text($count += 10)
+            })
+            $('.btn-add').mousedown(function(e){
+                setInterval(() )
+                $('h2').text(++$count)
+            })
+            
+        });
+    </script>
+</body>
+</html>
