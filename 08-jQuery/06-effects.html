@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+<body>
+    <main>
+        <header class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card text-center my-5">
+                      <div class="card-body">
+                        <nav class="breadcrumb">
+                            <a class="breadcrumb-item" href="index.html">Main Menu</a>
+                            <span class="breadcrumb-item active" aria-current="page">Template</span>
+                        </nav>
+                        <hr>
+                        <section class="card-text">
+                            <select class="form-select my-2">
+                                <option value="">select a jquery effects...</option>
+                                <option value="1">Hide</option>
+                                <option value="2"disabled>Show</option>
+                                <option value="3">Toggle</option>
+                                <option value="4"disabled>Slide Down</option>
+                                <option value="5">Slide up</option>
+                                <option value="6">Slide Toggle</option>
+                                <option value="7"disabled>Fade In</option>
+                                <option value="8">Fade Out</option>
+                                <option value="9"disabled>Fade To</option>
+                                <option value="10">Fade Toggle</option>
+                                <option value="11">Animate</option>
+                                <option value="12">Stop</option>
+                            </select>
+                            <figure>
+                                <img src="images/gamma2.png" width="400px">
+                                <FIgcaption>Gamma 2</FIgcaption>
+                            </figure>
+                        </section>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <nav>
+            </nav>
+        </section>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').change(function (evt) {
+                evt.preventDefault()
+                alert($(this).val())
+            })
+            
+        });
+    </script>
+</body>
+</html>
