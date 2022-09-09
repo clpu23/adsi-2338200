@@ -37,3 +37,14 @@
             echo $e->getMessage();
         }
     }
+
+    function listAllTrainers($conx) {
+        try{
+            $sql = "SELECT * FROM trainers";
+            $stm = $conx->prepare($sql);
+            $stm->execute();
+            return $stm->fetchAll();
+        }catch (PDOException $e){
+            echo $e->getMessage();
+        }
+    };

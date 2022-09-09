@@ -21,9 +21,9 @@
                     Web App Pokemons
                 </h1>
                 <hr>
-                <a href="" class = "btn btn-lg btn-outline-success">
-                    <i class = "fa fa-plus"></i>
-                        add pokemon
+                <a href="" class="btn btn-lg btn-outline-success">
+                    <i class="fa fa-plus"></i>
+                    Add Pokemon
                 </a>
                 <div class="table-responsive">
                     <table class="table table-striped table-hover mt-5">
@@ -45,17 +45,17 @@
                                        <td><?php echo $pokemon['name'] ?></td> 
                                        <td class="d-none d-sm-table-cell"><?php echo $pokemon['type'] ?></td> 
                                        <td>
-                                        <img src="<?php echo $pokemon['image']?>" width="40px">
+                                           <img src="<?php echo $pokemon['image'] ?>" width="40px">
                                        </td>
                                        <td class="d-none d-sm-table-cell"><?php echo $pokemon['nametrainer'] ?></td>
                                        <td>
                                        <div class="dropdown">
                                             <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                            <i class="fa-solid fa-list"></i>
+                                            <i class="fa-solid fa-gear"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-dark">
-                                                <li><a class="dropdown-item" href="#"> <i class="fa fa-search"></i> Show</a></li>
-                                                <li><a class="dropdown-item" href="#"><i class="fa fa-pen"></i>Edit</a></li>
+                                                <li><a class="dropdown-item" href="show.php?id=<?php echo $pokemon['id']?>"> <i class="fa fa-search"></i> Show</a></li>
+                                                <li><a class="dropdown-item" href="edit.php?id=<?php echo $pokemon['id']?>""><i class="fa fa-pen"></i>Edit</a></li>
                                                 <li><a class="dropdown-item bg-danger" href="#"><i class="fa fa-trash"></i>Delete</a></li>
                                             </ul>
                                             </div>
@@ -72,7 +72,7 @@
     </main>
     <script src="public/js/jquery-3.6.0.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
-    <script src="public/js/bootstrap.bundle.min.js">
+    <script src="public/js/bootstrap.bundle.min.js"></script>
     <script src="public/js/sweetalert2.js"></script>
     <script>
         $(document).ready(function () {
