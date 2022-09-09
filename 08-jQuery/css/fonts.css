@@ -2,18 +2,17 @@
     font-family: Poppins;
     src: url(../fonts/Poppins-Light.ttf);
 }
-body{
-    font-family: Poppins;
+
+body {
     background-color: #303840;
+    color: #fff;
+    font-family: Poppins;
 }
 
-.bg-purple{
-  background-color: #b5b9ff;  
-}
-h1{
-    border-radius: 20px;
-    color: #fff;
-}
-main{
+main {
     color: #303840;
+}
+
+.bg-base {
+    background-color:  #303840;
 }
