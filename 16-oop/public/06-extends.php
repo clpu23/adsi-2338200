@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Extends</title>
     <script src="../public/js/tailwind-3.2.1.js"></script>
 </head>
 <body class="bg-gradient-to-t
@@ -36,7 +36,7 @@
 
 
         </a>
-            Template
+            Extends
         </h1>
         <section class="bg-black/10
                         text-white
@@ -45,11 +45,47 @@
                           mt-10
                           min-h-[400px]
                           rounded">
-        
-        
-        </section>
-       
 
-    </main>
+                          <?php
+
+class Operation {
+    protected $number1;
+    protected $number2;
+
+    public function __construct($number1, $number2) {
+        $this->number1 = $number1;
+        $this->number2 = $number2;
     
-</body>
+    }
+
+}
+
+class Product extends Operation {
+    public function showResult() {
+        return '<p> <b>The product is: </b>'.($this->number1 * $this->number2).' </p>';
+    }
+}
+
+class Division extends Operation {
+    public function showResult() {
+        return '<p> <b>The division is: </b>'.($this->number1 / $this->number2).' </p>';
+    }
+}
+
+class Pow extends Operation {
+    public function showResult() {
+        return '<p> <b>The Exponetation is: </b>'.($this->number1 ** $this->number2).' </p>';
+    }
+}
+
+
+$oper = new Product(12, 9);
+echo $oper->showResult();
+
+$oper = new Division(1024, 32);
+echo $oper->showResult();
+
+$oper = new Pow(4, 4);
+echo $oper->showResult();
+
+?>
